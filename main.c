@@ -3,38 +3,44 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-//This program Prints the perfect numbers from 1 to 1000
+//this program reads 20 number from the user and display the unique ones and their sum
+
+int sum(int arr[]){
+    int sum = 0 ;
+for(int i = 0 ; i < 20 ; i++){
+    sum += arr[i];
+}
+return sum;
+}
+
 int main()
 {
-    bool loop = true;
-    char ans ;
-    int sum = 0 ,num;
-    while(loop == true){
-    printf("Enter the number : ");
+bool check=false;
+int num,result;
+int arr[20]={};
+printf("Enter the numbers : ");
+for(int i = 0 ; i < 20 ;i++){       //here to get the numbers and check if it exits or not
+    check = false;
     scanf(" %d",&num);
-for(int i = 1 ; i <= num ; i++){
-        sum = 0;
-    for(int j = 1 ; j < i ; j++){
-        if(i%j==0){
-            sum += j;
-        }
+    for(int j = 0 ; j < 20 ; j++){
+        if(num==arr[j])
+            check = true;
+
     }
-    }
-        if(sum == num){
-        printf (" %d",num);
-        printf ("-> perfect number \n");
-    }
-    else{
-        printf (" %d",num);
-        printf ("-> is not a perfect number \n");
+if(check==false)
+    arr[i]=num;
 
 }
-printf("Do you want to check another number ? ");
-    scanf(" %c",&ans);
-    if (ans == 'y' || ans == 'Y' )
-        loop = true;
-    else
-        loop = false;
+
+printf("The unique number are :");
+for(int i = 0 ; i < 20 ; i++){
+if (arr[i]==0)
+    continue;
+else
+    printf("%d \n",arr[i]);
 }
+result = sum (arr);
+printf("Their sum = %d",result);
+
 return 0;
 }
