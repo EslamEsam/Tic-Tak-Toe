@@ -32,11 +32,11 @@ void print (char sym[3][3]){
 	printf("\nPlayer 1 : X");
 	printf("\nPlayer 2 : O");
 	printf("\n\t\t\t       |       |       ");
-	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[3],sym[3],sym[3]);
+	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[0][0],sym[0][1],sym[0][2]);
 	printf("\n\t\t\t-------|-------|-------");
-	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[3],sym[3],sym[3]);
+	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[1][0],sym[1][1],sym[1][2]);
 	printf("\n\t\t\t-------|-------|-------");
-	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[3],sym[3],sym[3]);
+	printf("\n\t\t\t   %c   |   %c   |   %c   ",sym[2][0],sym[2][1],sym[2][2]);
 	printf("\n\t\t\t       |       |       ");
 	printf("\n\n");
 
